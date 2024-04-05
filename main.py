@@ -27,7 +27,7 @@ bot = Client("bot",
              api_hash= "70ddbf0162bafe8b7e0007c3b22d01c0")
 
 
-@bot.on_message(filters.command(["Rajsa"]))
+@bot.on_message(filters.command(["rajsa"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(f"Hello [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /vastavik")
 
@@ -39,7 +39,7 @@ async def restart_handler(_, m):
 
 
 
-@bot.on_message(filters.command(["vastavik"]))
+@bot.on_message(filters.command(["rajsa"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('Send TXT file for download')
     input: Message = await bot.listen(editable.chat.id)
