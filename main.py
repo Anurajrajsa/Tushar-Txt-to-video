@@ -27,14 +27,14 @@ bot = Client("bot",
              api_hash= "70ddbf0162bafe8b7e0007c3b22d01c0")
 
 
-@bot.on_message(filters.command(["start"]))
+@bot.on_message(filters.command(["Rajsa"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(f"Hello [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /vastavik")
 
 
 @bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
-    await m.reply_text("**STOPPED**🚦", True)
+    await m.reply_text("**STOPS MERE BETE**🚦", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
@@ -100,7 +100,7 @@ async def account_login(bot: Client, m: Message):
     
     
 
-    await editable.edit("**Enter A Highlighter Otherwise send 👉Co👈 **")
+    await editable.edit("**Enter A Highlighter Otherwise send 👉no👈 **")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -189,7 +189,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**Downloading:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
+                    Show = f"**Downloading By Rajsa:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
